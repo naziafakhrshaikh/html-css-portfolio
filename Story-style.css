@@ -1,0 +1,27 @@
+ body {
+  background-image: url('Background.webp');
+  background-size: cover;       /* image covers entire screen */
+  background-repeat: no-repeat; /* image doesn’t repeat */
+  background-attachment: fixed; /* optional: keeps image still when scrolling */
+  background-position: center;  /* centers the image */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+/* Using flex-box to center the main text in the center of the screen. */
+.title { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 92px;
+  }
+  .body { 
+    display: flex;
+    flex-direction: column;
+    align-items:justify;
+    min-height: 92px;
+  }

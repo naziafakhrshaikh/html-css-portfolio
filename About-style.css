@@ -1,0 +1,95 @@
+body{
+  /* background-color: rgb(227, 227, 150); */
+  background-image: url('Background.webp');
+  background-size: cover;       /* image covers entire screen */
+  background-repeat: no-repeat; /* image doesn’t repeat */
+  background-attachment: fixed; /* optional: keeps image still when scrolling */
+  background-position: center;  /* centers the image */
+   font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+
+/* Collage container */
+.CollageContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;  /* increased spacing so tilted cards don’t overlap */
+  padding: 20px;
+  justify-items: center; /* centers cards in their cells */
+}
+
+/* Base card styling */
+.card {
+  background: linear-gradient(135deg, #c5a572, #7a5c2e);
+  /* background: #fff; */
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 260px; /* keeps collage tidy */
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card1 { transform: rotate(-5deg); }
+.card2 { transform: rotate(3deg); }
+.card3 { transform: rotate(-2deg); }
+.card4 { transform: rotate(4deg); }
+.card5 { transform: rotate(-3deg); }
+.card6 { transform: rotate(2deg); }
+/* .card7 { transform: rotate(-1deg); } */
+
+/* images on card */
+.card img {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card7 {
+  max-width: 100%;      /* allows it to scale inside its column */
+  min-height: 280px;
+  padding: 16px;
+}
+
+.card7 .lang-row a {
+  flex: 0 0 60px;       fixed size icons
+  height: 60px;
+}
+
+.card7 p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.lang-row img {
+  width: 60px;
+  border-radius: 6px;
+}
+
+/* Mobile-friendly Responsive layout.*/
+/* for medium screen i,e tablet */
+@media (min-width: 600px) {
+  .CollageContainer {
+    gap: 26px;
+    padding: 18px;
+  }
+
+  .card {
+    max-width: 260px;
+    min-height: 260px;
+  }
+
+}
+/* For larger screen i,e. desktop */
+@media (min-width: 900px) {
+  .CollageContainer {
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .card {
+    max-width: 280px;
+  }
+}

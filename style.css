@@ -1,0 +1,113 @@
+/* style code for index.html */
+
+body{
+  background-image: url('Background.webp');
+  background-size: cover;       /* image covers entire screen */
+  background-repeat: no-repeat; /* image doesn’t repeat */
+  background-attachment: fixed; /* optional: keeps image still when scrolling */
+  background-position: center;  /* centers the image */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+/* Navigate to other pages in the portfolio */
+.navigation-bar{
+    /* any style for the navigation bar need to go here. */
+    /* HELP!!!!! I want to have hamburger drop down navigation bar. I dont know how to. */
+}
+/* Using flex-box to center the main text in the center of the screen. */
+.main { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 92px;
+  }
+  /* introduction */
+  .main h3{
+    color: linear-gradient(135deg, #c5a572, #7a5c2e);
+  }
+
+  /* Container with all the links */
+.links-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* style of link buttons. */
+ /* Link buttons for About Me, Conatact me, My work, My Story */
+.links-button{
+padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #b08d57, #8f6b32);
+  transition: 0.2s ease-in-out;
+  min-width: 120px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Hover effect */
+.contact-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #c5a572, #7a5c2e);
+}
+/* end of buttons style */
+
+/* Footer style */
+footer { 
+  background: linear-gradient(135deg, #7a5c2e, #b08d57);
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  margin-top: 14px;
+  border-top: 2px solid #8f6b32;
+}
+/* Nazia Shaikh. All right reserverd line. */
+footer p {
+  margin: 6px 0;
+}
+
+footer a {
+  color: #fff3c5;  /* warm light gold */
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 17px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer i {
+  margin-right: 4px;
+}
+/* end of footer style.  */
+
+/* Mobile-friendly Responsive layout.*/
+/* for medium screen i,e tablet */
+@media (min-width: 600px) {
+  .main {
+    gap: 26px;
+    padding: 18px;
+  }
+ /* Help!!!!! I dont know what numbers to put here. */
+  .links-container {
+    /* max-width: 260px; */
+    /* min-height: 260px; */
+  }
+
+}
+/* For larger screen i,e. desktop */
+@media (min-width: 900px) {
+  .main {
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .links-container {
+    /* max-width: 280px; */
+  }
+}

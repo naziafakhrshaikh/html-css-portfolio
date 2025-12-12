@@ -1,0 +1,112 @@
+body {
+  background-image: url('Background.webp');
+  background-size: cover;       /* image covers entire screen */
+  background-repeat: no-repeat; /* image doesn’t repeat */
+  background-attachment: fixed; /* optional: keeps image still when scrolling */
+  background-position: center;  /* centers the image */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+/* This container contains input placeholder for name, number, email and message.  */
+/* HELP!!!!!!!!!!!! I am not being abble to bring this box in the middle of the page */
+.contact-container {
+    /* background: linear-gradient(135deg, #ffd700, #ffb700, #fff2a8); */
+    background: linear-gradient(135deg, #b08d57,#c5a572,#8f6b32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(17, 84, 54, 0.1);
+    width: 320px;
+    display: flex;
+    min-height: 92px;
+}  
+/* The Contact Me line. should be rustic gold */
+.contact-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #7a5c2e; /* rustic gold heading */
+}
+
+input,
+textarea {
+    width: 100%;
+}
+
+/* This style is for the contact section on the foot of the page. Its not a footer. Just a bar with links. */
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  padding: 40px 20px;
+  color: #4a3b26; /* dark rustic gold-brown text */
+}
+/* Although there is no h2 anymore, removing this part is messing up everything. */
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #4a3b26; /* dark rustic gold-brown text */
+  /* color: #7a5c2e; rustic gold heading */
+}
+/* One line message */
+.contact-section p {
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+/* the buttons to the contact links. */
+/* Button container */
+.contact-btnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Buttons */
+.contact-btn {
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #b08d57, #8f6b32);
+  transition: 0.2s ease-in-out;
+  min-width: 120px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Hover effect */
+.contact-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #c5a572, #7a5c2e);
+}
+/* Mobile-friendly Responsive layout.*/
+/* for medium screen i,e tablet */
+@media (min-width: 600px) {
+  .contact-container {
+    gap: 26px;
+    padding: 18px;
+  }
+/* HELP !!!!!! i dont know what numbers to put here */
+  .contact-btnContainer {
+    /* max-width: 260px; */
+    /* min-height: 260px; */
+  }
+
+}
+/* For larger screen i,e. desktop */
+@media (min-width: 900px) {
+  .contact-container {
+    gap: 40px;
+    padding: 20px;
+  }
+  .contact-btnContainer {
+    /* max-width: 280px; */
+  }
+}
