@@ -1,6 +1,7 @@
+/* style sheet for AboutMe.html */
 body{
-  /* background-color: rgb(227, 227, 150); */
-  background-image: url('Background.webp');
+ 
+  background-image: url('background2.webp');
   background-size: cover;       /* image covers entire screen */
   background-repeat: no-repeat; /* image doesn’t repeat */
   background-attachment: fixed; /* optional: keeps image still when scrolling */
@@ -20,11 +21,14 @@ body{
 
 /* Base card styling */
 .card {
-  background: linear-gradient(135deg, #c5a572, #7a5c2e);
-  /* background: #fff; */
+  /* color of the text on the button */
+  color: #7a5c2e;
+  /* background color */
+  background: linear-gradient(#ccb085, #d0b693, #d3bb91, #ecdcb5, #a9732fec);
+   border-top: 2px solid #8f6b32;
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+   box-shadow: linear-gradient(135deg, #c5a572, #7a5c2e);
   width: 100%;
   max-width: 260px; /* keeps collage tidy */
   text-align: center;
@@ -37,40 +41,34 @@ body{
 .card4 { transform: rotate(4deg); }
 .card5 { transform: rotate(-3deg); }
 .card6 { transform: rotate(2deg); }
-/* .card7 { transform: rotate(-1deg); } */
+.card7 { transform: rotate(-1deg); }
+.card8 { transform: rotate(3deg); }
 
-/* images on card */
-.card img {
-  width: auto;
-  height: auto;
-  border-radius: 10px;
+/* Hover effect */
+.contact-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #c5a572, #7a5c2e);
+}
+/* end of buttons style */
+
+
+/* images on each card */
+  .card img {
+  /* border-radius: 10px; */
   padding: 10px;
-}
-
-.card7 {
-  max-width: 100%;      /* allows it to scale inside its column */
-  min-height: 280px;
-  padding: 16px;
-}
-
-.card7 .lang-row a {
-  flex: 0 0 60px;       fixed size icons
-  height: 60px;
-}
-
-.card7 p {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.lang-row img {
-  width: 60px;
-  border-radius: 6px;
+   /* width: auto; */
+  width: 100%;            /* fit card width */
+   /* height: auto; */
+  max-height: 180px;     /* keeps all cards uniform */
+  object-fit: cover;    /* prevents stretching */
+  display: block;        /* removes inline spacing issues */
+  margin: 0 auto;        /* centers image */
+  border-radius: 8px;    /* optional: looks cleaner */
 }
 
 /* Mobile-friendly Responsive layout.*/
-/* for medium screen i,e tablet */
-@media (min-width: 600px) {
+/* for small screen. i,e phone */
+@media screen and (min-width: 600px) {
   .CollageContainer {
     gap: 26px;
     padding: 18px;
@@ -79,17 +77,5 @@ body{
   .card {
     max-width: 260px;
     min-height: 260px;
-  }
-
-}
-/* For larger screen i,e. desktop */
-@media (min-width: 900px) {
-  .CollageContainer {
-    gap: 40px;
-    padding: 20px;
-  }
-
-  .card {
-    max-width: 280px;
   }
 }

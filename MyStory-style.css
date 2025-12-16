@@ -1,11 +1,14 @@
- body {
-  background-image: url('Background.webp');
+/* style sheet for MyStory.html */
+body {
+  
+  background-image: url('background2.webp');
   background-size: cover;       /* image covers entire screen */
   background-repeat: no-repeat; /* image doesn’t repeat */
   background-attachment: fixed; /* optional: keeps image still when scrolling */
   background-position: center;  /* centers the image */
   font-family: 'Times New Roman', Times, serif;
   font-size: medium;
+  color: #7a5c2e; /* rustic gold font */
 }
 .navbar{
     display: flex;

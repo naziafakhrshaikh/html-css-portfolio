@@ -1,18 +1,19 @@
-  body{
+/* style sheet for Projects.html */
+body{
     /* Background image */
-  background-image: url('Background.webp');
+  background-image: url('background2.webp');
   background-size: cover;       /* image covers entire screen */
   background-repeat: no-repeat; /* image doesn’t repeat */
   background-attachment: fixed; /* optional: keeps image still when scrolling */
   background-position: center;  /* centers the image */
    font-family: 'Times New Roman', Times, serif;
   font-size: medium;
+  /* rustic gold font */
+  color: #7a5c2e; 
   }
 .navitation-bar{
   /* anything about navbar */
 }
-
-
   .MyWorkContainer{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -22,47 +23,50 @@
   }
 /* Any of the 3 cards */
   .card{ 
-  background: #fff;
+  /* color of the text on the button */
+  color: #7a5c2e;
+  /* background color */
+  background: linear-gradient(#ccb085, #d0b693, #d3bb91, #ecdcb5, #a9732fec);
+   border-top: 2px solid #8f6b32;
   border-radius: 12px;
   padding: 15px;
+  overflow:hidden;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 360px; 
+  width: 365px; 
   text-align: center;
   transition: transform 0.2s;
   }
+
   /* image on each card */
   .card img {
-  width: auto;
-  height: auto;
+  object-fit: cover;
   border-radius: 10px;
   padding: 10px;
+  width: 100%;            /* fit card width */
+  max-height: 180px;     /* keeps all cards uniform */
+  object-fit: cover;    /* prevents stretching */
+  display: block;        /* removes inline spacing issues */
+  margin: 0 auto;        /* centers image */
+  border-radius: 8px;    /* optional: looks cleaner */
 }
-  .card1 .lang-row{
 
-  }
   /* Mobile-friendly Responsive layout.*/
-/* for medium screen i,e tablet */
-@media (min-width: 600px) {
-  .CollageContainer {
+/* for small screen i,e phone */
+@media screen and (min-width: 600px) {
+  .MyWorkContainer {
     gap: 26px;
     padding: 18px;
   }
 
   .card {
-    max-width: 360px;
+    max-width: 260px;
     min-height: 260px;
   }
 
-}
-/* For larger screen i,e. desktop */
-@media (min-width: 900px) {
-  .CollageContainer {
-    gap: 40px;
-    padding: 20px;
-  }
-
-  .card {
-    max-width: 380px;
+  .card img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
   }
 }
